@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Overdue Invoice Flagging</title>
+<style>
+:root{--navy:#10243a;--blue:#2864dc;--mint:#c8f7e2;--ink:#182433;--muted:#607086;--bg:#f4f7fb}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+header{background:var(--navy);color:white;padding:22px max(6vw,24px);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.logo{font-weight:800;letter-spacing:.3px}.nav a{color:#d9e6ff;text-decoration:none;margin-left:20px;font-size:14px}
+.hero{padding:76px max(6vw,24px) 64px;background:linear-gradient(120deg,#10243a,#1d4776);color:white}
+.tag{display:inline-block;background:#244b70;border:1px solid #4f759c;border-radius:99px;padding:6px 12px;font-size:12px}
+h1{font-size:clamp(36px,5vw,58px);line-height:1.08;max-width:760px;margin:20px 0}
+.hero p{max-width:640px;color:#d7e4f5;font-size:18px}
+.btn{display:inline-block;margin-top:18px;background:var(--mint);color:#123b32;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
+.wrap{max-width:1100px;margin:auto;padding:48px 24px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;border:1px solid #e1e8f0;border-radius:18px;padding:24px;box-shadow:0 8px 24px #10243a0a}
+.num{font-size:28px;font-weight:800;color:var(--blue)}h2{font-size:30px;margin:0 0 10px}h3{margin:8px 0}.muted{color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:24px}
+.step{background:white;border-radius:14px;padding:20px;border:1px solid #e1e8f0}.step b{color:var(--blue)}
+footer{padding:24px;text-align:center;color:#68788c;border-top:1px solid #e1e8f0;font-size:13px}
+</style></head>
+<body>
+<header><div class="logo">↗ LedgerFlow</div><nav class="nav"><a href="#how">How it works</a><a href="#benefits">Benefits</a><a href="#about">About</a></nav></header>
+<section class="hero"><span class="tag">NO-CODE WORKFLOW · N8N</span><h1>Know which invoices need attention.</h1><p>LedgerFlow demonstrates how an n8n workflow can identify unpaid invoices, calculate overdue days and create a clear follow-up report automatically.</p><a class="btn" href="#how">Explore the workflow ↓</a></section>
+<main>
+<section class="wrap" id="benefits"><h2>Less manual checking. Clearer priorities.</h2><p class="muted">A simple concept website for an invoice follow-up automation project.</p><div class="grid">
+<div class="card"><div class="num">01</div><h3>Upload once</h3><p class="muted">Submit a CSV file containing invoice details through a simple form.</p></div>
+<div class="card"><div class="num">02</div><h3>Classify overdue items</h3><p class="muted">Separate paid and not-yet-due invoices from unpaid overdue invoices.</p></div>
+<div class="card"><div class="num">03</div><h3>Export a report</h3><p class="muted">Create a CSV list that helps a team decide which clients to contact first.</p></div>
+</div></section>
+<section class="wrap" id="how"><h2>Four steps in n8n</h2><div class="steps">
+<div class="step"><b>STEP 1</b><h3>Form Trigger</h3><p class="muted">Receives the invoice CSV upload.</p></div>
+<div class="step"><b>STEP 2</b><h3>Extract from File</h3><p class="muted">Reads the CSV rows as structured data.</p></div>
+<div class="step"><b>STEP 3</b><h3>Code</h3><p class="muted">Calculates overdue days and assigns a severity label.</p></div>
+<div class="step"><b>STEP 4</b><h3>Convert to File</h3><p class="muted">Creates a downloadable CSV report.</p></div>
+</div></section>
+<section class="wrap" id="about"><div class="card"><h2>Overdue status rules</h2><div class="grid">
+<div><h3>Warning</h3><p class="muted">1–14 days overdue. A friendly reminder may be enough.</p></div>
+<div><h3>Critical</h3><p class="muted">15–30 days overdue. Direct follow-up is recommended.</p></div>
+<div><h3>Severe</h3><p class="muted">More than 30 days overdue. Consider escalation.</p></div>
+</div><p class="muted">This is a demonstration landing page. It does not connect to a live n8n workflow or process uploaded financial data.</p><a href="https://n8n.io/" target="_blank" rel="noopener">Visit the official n8n website ↗</a></div></section>
+</main><footer>LedgerFlow · Student project concept · Built for an n8n automation assignment</footer>
+</body></html>
